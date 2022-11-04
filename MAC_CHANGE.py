@@ -17,7 +17,7 @@ def change_mac(interface, new_mac):
     subprocess.call(["ifconfig", interface, "down"])
     subprocess.call(["ifconfig", interface, "hw", "ether", new_mac])
     subprocess.call(["ifconfig", interface, "up"])
-    # ejemplo:  sudo python mac_change.py --interface eth0 --mac 00:11:22:33:44:54
+    # ejemplo:  sudo python mac_change.py -i eth0 -m 00:22:44:55:66:65
 
 def get_current_mac(interface):
     ifconfig_results = subprocess.check_output(["ifconfig", options.interface])
